@@ -1,0 +1,501 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+.text-center
+	text-align: center
+b, strong
+	font-weight: bold
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+//custom sass//
+.button-filled, .button
+	a
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 180px
+		height: 50px
+		border-radius: 25px
+		border: solid $green 2px
+		margin: 10px
+.button a
+	&
+		color: $green
+.button a:hover
+	background-color: $green
+	&
+		color: white
+.button a:focus
+	border: solid #37c48c 2px
+	background-color: #37c48c
+	&
+		color: white
+.button-filled a
+	background-color: $green
+	&
+		color: white
+.button-filled a:hover
+	background-color: $green
+	box-shadow: 0 5px 30px 0 #3effb3
+	&
+		color: white
+.button-filled a:focus
+	box-shadow: 0 3px 10px 0 #3effb3
+	background-color: #37c48c
+	border: 2px solid #37c48c
+	&
+		color: white
+h1.red
+	color: $red
+	font-weight: bold
+h1
+	font-size: 26px
+	font-weight: 100
+	line-height: 1.31
+	letter-spacing: 1.3px
+h2
+	font-size: 25px
+  font-weight: 500
+h3
+	font-size: 16px
+  font-weight: bold
+.header
+	width: 100%
+	position: fixed
+	z-index: 1000
+	padding: 10px 0
+	&__busket a:focus
+		.header__busket--btn--shoppingbag
+			box-shadow: 0 3px 10px 0 #3effb3
+			background-color: #37c48c
+	&__busket
+		&.active
+			visibility: hidden
+		a:hover
+			text-decoration: none
+		&--btn
+			width: 216px
+			color: $text
+			font-size: 14px
+			display: flex
+			align-items: center
+			&:hover
+				.header__busket--btn--shoppingbag
+					box-shadow: 0 5px 30px 0 #3effb3
+			&--shoppingbag
+				margin-left: 20px
+				margin-right: 18px
+				width: 50px
+				height: 48px
+				background-color: $green
+				border-radius: 50px
+				text-align: center
+				img
+					padding-top: 6px
+					padding-left: 2px
+			&--title
+				padding-left: 25px
+			&--itemsbought
+				color: $green
+				font-size: 20px
+				font-weight: 500
+			cursor: pointer
+			border: solid $grey 1px
+			border-radius: 25px
+	&__menu
+		width: calc(100% - 216px - 146px - 52px)
+		.header__menu--list::before
+			content: ''
+			position: absolute
+			width: 1px
+			height: 28px
+			background-color: $grey
+		&--list
+			position: relative
+			list-style: none
+			display: flex
+			align-items: center
+			padding: 0
+			margin: 0px
+			height: 100%
+			width: 100%
+			li
+				padding-left: 20px
+			a
+				color: $darkgrey
+				&:hover
+					text-decoration: none
+	a
+		display: flex
+		align-items: center
+	&__logo
+		width: 146px
+		span
+			padding-left: 10px
+			font-size: 20px
+			color: $red
+			position: relative
+			&.white
+				color: white
+		img
+			width: 40px
+			height: 40px
+		a:hover
+			text-decoration: none
+	&__humburger
+		&--btn
+			display: block
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			border: 1px solid $green
+			position: relative
+			span
+				position: absolute
+				top: 50%
+				width: 25px
+				height: 1px
+				margin-top: -0.5px
+				left: 50%
+				margin-left: -12.5px
+				background-color: $green
+				&::before
+					transform: translateY(-7px)
+				&::after
+					transform: translateY(7px)
+				&::after, &::before
+					content: ''
+					display: block
+					transition: 0.5s
+					position: absolute
+					top: 50%
+					width: 20px
+					height: 1px
+					margin-top: -0.5px
+					left: 50%
+					margin-left: -10px
+					background-color: $green
+.title
+	padding-top: 140px
+	padding-bottom: 116px
+	background-image: url(../img/artboard.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	br
+		display: none
+.content
+	margin-top: -50px
+	&__block
+		overflow: hidden
+		border-radius: 10px
+		box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1)
+	  background-color: #ffffff
+		display: flex
+		&--right
+			width: 100%
+			background: #fff
+			box-shadow: -17px 0px 106px #e6e6e6
+			position: relative
+			&--slides
+				position: absolute
+				display: none
+				width: 100%
+				height: 100%
+				&--bottom
+					display: flex
+					&--img
+						display: flex
+						justify-content: center
+						align-items: center
+						height: 60px
+						width: 60px
+						border-radius: 50%
+						cursor: pointer
+						border: solid transparent 2px
+						&.active
+							border: solid $red 2px
+						img
+							width: 39px
+							height: 40px
+				&--describe
+					width: 60%
+					display: flex
+					flex-direction: column
+					justify-content: center
+					&--buttons
+						display: flex
+					&--price
+						color: $grey
+						font-size: 14px
+					  font-weight: normal
+					  font-style: normal
+					  font-stretch: normal
+					  line-height: normal
+					  letter-spacing: normal
+					  text-align: center
+						span
+							color: $text
+							font-size: 25px
+  						font-weight: 500
+							padding-left: 10px
+					&--text-info
+						max-width: 440px
+						max-height: 191px
+						font-size: 16px
+						font-weight: normal
+						line-height: normal
+				&--photo
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					width: 40%
+					&--big
+						padding-bottom: 35px
+						position: relative
+						img
+							opacity: 0
+							z-index: -1
+							height: 220px
+							position: absolute
+							top: 0
+							left: 0
+							transition: all .3s ease
+						.active
+							position: relative
+							z-index: 1
+							opacity: 1
+
+				&.activeSlide
+					display: flex
+					position: relative
+		&--left
+			background-color: #fff
+			overflow: hidden
+			&--item
+				cursor: pointer
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				&.active
+					.content__block--left--item--line
+						display: block
+				&--line
+					display: none
+					height: 2px
+					width: 90px
+					background-color: $red
+
+				&--img
+					padding-bottom: 18px
+					padding-top: 10px
+				&.active
+					background-color: #fff
+					box-shadow: -33px 9px 38px 14px rgba(0, 0, 0, 0.1)
+				position: relative
+				z-index: 111
+				margin-bottom: 39px
+				width: 160px
+				height: 126px
+			&--item:nth-child(3)
+				margin-bottom: 0
+.header__humburger
+	.active
+		border: 1px solid $grey
+	.active span, .active span::before, .active span::after
+		background-color: $grey
+	.active span::before
+		transform: rotate(45deg)
+		width: 25px
+	.active span::after
+		transform: rotate(-45deg)
+		width: 25px
+	.active span
+		margin-left: -14px
+		height: 0
+.overlay
+	transition: opacity 1s ease
+	opacity: 0
+	z-index: -10
+	position: fixed
+	top: 0
+	width: 100vw
+	height: 100vh
+	background-color: rgba(0, 0, 0, 0.3)
+	&__busket--menu
+		transition: all 0.3s ease
+		transform: translateX(100%)
+		position: absolute
+		right: 0
+		width: 45%
+		background-color: white
+		height: 100%
+		padding: 0 40px 0 20px
+		display: flex
+		flex-direction: column
+		&--title
+			padding-top: 20px
+			padding-bottom: 40px
+			display: flex
+			justify-content: space-between
+	&__busket--menu--buy-list
+		padding-top: 20px
+		height: (100%)
+		&--item
+			display: flex
+			align-items: center
+			position: relative
+			margin-bottom: 30px
+			&--title
+				display: flex
+				justify-content: space-between
+				padding-left: 10px
+				width: calc(100% - 50px)
+				font-weight: bold
+				span.count
+					font-weight: normal
+				span.cancel
+					font-size: 25px
+					color: $red
+					margin-right: 16px
+		&--item::after
+			position: absolute
+			bottom: -15px
+			content: ''
+			height: 1px
+			width: 100%
+			background-color: $grey
+		&--item:last-child::after
+			display: none
+			position: absolute
+			bottom: -15px
+			content: ''
+			height: 1px
+			width: 100%
+			background-color: $grey
+	&__busket--menu--total-count
+		span.sum
+			font-size: 14px
+			color: $grey
+		span.total
+			padding-left: 20px
+			font-size: 24px
+			font-weight: bold
+	&__busket--menu--checkout
+		display: flex
+		justify-content: center
+		padding: 40px 0
+	&.active
+		z-index: 2000
+		opacity: 1
+	&__busket--menu.active
+		transform: translateX(0)
+.overlay__busket--menu--title--btn-close
+	span
+		width: 50px
+		height: 50px
+		border: 1px solid $grey
+		border-radius: 50%
+		position: relative
+		display: block
+	span::after
+		position: absolute
+		left: 50%
+		top: 50%
+		content: ''
+		height: 1px
+		width: 25px
+		display: block
+		background-color: $grey
+		margin-left: -12.5px
+		transform: rotate(45deg)
+	span::before
+		position: absolute
+		left: 50%
+		top: 50%
+		content: ''
+		height: 1px
+		width: 25px
+		display: block
+		background-color: $grey
+		margin-left: -12.5px
+		transform: rotate(-45deg)
+footer
+	margin-top: -50px
+	background-color: #4a4a4a
+	.footer-container
+		color: white
+		padding-top: 250px
+		padding-bottom: 36px
+		&__menu--list
+			list-style: none
+			display: flex
+			margin-bottom: 5px
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				width: 1px
+				background-color: white
+				height: 28px
+				margin-left: 30px
+			li
+				padding-left: 29px
+			a
+				color: white
+			a:hover
+				text-decoration: none
+		&__social
+			display: flex
+			&--item
+				margin-left: 10px
+				width: 29.8px
+				height: 29.8px
+				background-color: #c13e4d
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				color: white
+
+
+
+
+
+
+@import "media" // Always at the end
