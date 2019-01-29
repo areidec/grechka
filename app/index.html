@@ -28,32 +28,28 @@
 
 <body>
 	<!-- Custom HTML -->
-	<div class="header">
+	<header class="menu--grey">
 		<div class="container">
-			<div class="row align-items-xl-center">
-				<div class="header__logo"><a href="#">
-							<img src="./img/group-4-copy@3x.png" alt="busket">
-							<span>TAG LINE</span></a>
+			<div class="row">
+				<div class="logo">
+					<a href="#"><div class="logo__img"><img src="./img/group-4-copy-red.svg" alt="bag"></div>
+					<div class="logo__title">TAG LINE</div></a>
 				</div>
-				<nav class="header__menu">
-						<ul class="header__menu--list">
-							<li><a href="#">Каталог</a></li>
-							<li><a href="#">Бренды</a></li>
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Доставка</a></li>
-						</ul>
-				</nav>
-				<div class="header__busket">
-						<a href="#">
-							<div class="header__busket--btn">
-								<span class="header__busket--btn--title hidden-md-down">КОРЗИНА</span>
-								<div class="header__busket--btn--shoppingbag">
-									<img src="./img/shopping-bag.png" alt="shopping-bag">
-								</div>
-								<span class="header__busket--btn--itemsbought">2</span>
-							</div>
-						</a>
+				<div class="menu__list">
+					<ul>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Бренды</a></li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Доставка</a></li>
+					</ul>
+				</div>
+				<a href="#" class="busketBtn">
+					<span class="busketBtn__title">Корзина</span>
+					<div class="busketBtn__icon">
+						<img src="./img/shopping-bag.svg" alt="">
 					</div>
+					<span class="busketBtn__number">2</span>
+				</a>
 				<div class="header__humburger">
 					<a href="#" class="header__humburger--btn">
 						<span></span>
@@ -61,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 	<section class="title">
 			<div class="container">
 				<div class="row">
@@ -215,7 +211,36 @@
 			</div>
 		</div>
 	</section>
-	<!-- Custom HTML END -->
+	<footer class="menu--dark">
+		<div class="container">
+			<div class="row">
+				<div class="logo">
+					<a href="#"><div class="logo__img"><img src="./img/group-4-copy.svg" alt="bag"></div>
+					<div class="logo__title">TAG LINE</div></a>
+				</div>
+				<div class="menu__list">
+					<ul>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Бренды</a></li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Доставка</a></li>
+					</ul>
+				</div>
+				<div class="social-menu">
+					<div class="social-menu__item">
+						<a href="#"><img src="./img/facebook-copy.svg" alt="fb"></a>
+					</div>
+					<div class="social-menu__item">
+							<a href="#"><img src="./img/vk-copy.svg" alt="vk"></a>
+					</div>
+					<div class="social-menu__item">
+						<a href="#"><img src="./img/instagram-logo-copy.svg" alt="inst"></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
 
 	<div class="overlay">
 		<div class="overlay__busket--menu">
@@ -258,42 +283,7 @@
 		</div>
 	</div>
 	<script src="js/scripts.min.js"></script>
-	<footer>
-		<div class="footer-container">
-			<div class="container">
-				<div class="row align-items-xl-center">
-					<div class="col-xl-2">
-						<div class="header__logo"><a href="#">
-									<img src="./img/group-4-copy@3x2.png" alt="busket">
-									<span class="white">TAG LINE</span></a>
-						</div>
-					</div>
-					<div class="col-xl-8">
-						<div class="footer-container__menu">
-							<ul class="footer-container__menu--list">
-								<li><a href="#">Каталог</a></li>
-								<li><a href="#">Бренды</a></li>
-								<li><a href="#">О нас</a></li>
-								<li><a href="#">Доставка</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xl-2">
-						<div class="footer-container__social">
-							<a href="#" class="footer-container__social--item">
-								<i class="fa fa-facebook" aria-hidden="true"></i>
-							</a>
-							<a href="#" class="footer-container__social--item">
-								<i class="fa fa-vk" aria-hidden="true"></i>
-							</a>
-							<a href="#" class="footer-container__social--item">
-								<i class="fa fa-instagram" aria-hidden="true"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+
+	<!-- Custom HTML END -->
 </body>
 </html>

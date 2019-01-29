@@ -20,5 +20,14 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areidec/grechka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/areidec/grechka/issues"
+  },
+  "homepage": "https://github.com/areidec/grechka#readme"
 }
