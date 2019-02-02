@@ -28,10 +28,10 @@
 
 <body>
 	<!-- Custom HTML -->
-	<header class="menu--grey">
+	<header class="menu_grey">
 		<div class="container">
 			<div class="row">
-				<div class="logo">
+				<div class="menu__logo logo">
 					<a href="#"><div class="logo__img"><img src="./img/group-4-copy-red.svg" alt="bag"></div>
 					<div class="logo__title">TAG LINE</div></a>
 				</div>
@@ -50,8 +50,8 @@
 					</div>
 					<span class="busketBtn__number">2</span>
 				</a>
-				<div class="header__humburger">
-					<a href="#" class="header__humburger--btn">
+				<div class="humburger">
+					<a href="#" class="humburger__btn">
 						<span></span>
 					</a>
 				</div>
@@ -68,142 +68,142 @@
 				</div>
 		</div>
 	</section>
-	<section class="content">
+	<section class="container-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="content__block">
-						<div class="content__block--left">
-							<div class="content__block--left--item active">
-								<div class="content__block--left--item--img">
-									<img src="./img/download-1-copy-4.png" alt="pocket">
-								</div>
-								<h3>Пакет 1</h3>
-								<div class="content__block--left--item--line active"></div>
+					<div class="container-box__wrap">
+						<div class="container-box__left">
+							<div class="container-box__tab block block_active">
+								<div class="block__img"><img src="./img/download-1-copy-4.png" alt="box"></div>
+								<div class="block__title">Пакет 1</div>
+								<div class="block__line block__line_active"></div>
 							</div>
-							<div class="content__block--left--item">
-								<div class="content__block--left--item--img">
-									<img src="./img/download-2-copy.png" alt="pocket">
-								</div>
-								<h3>Пакет 2</h3>
-								<div class="content__block--left--item--line"></div>
+							<div class="container-box__tab block">
+								<div class="block__img"><img src="./img/download-copy.png" alt="box"></div>
+								<div class="block__title">Пакет 2</div>
+								<div class="block__line"></div>
 							</div>
-							<div class="content__block--left--item">
-								<div class="content__block--left--item--img">
-									<img src="./img/download-copy.png" alt="pocket">
-								</div>
-								<h3>Пакет 2</h3>
-								<div class="content__block--left--item--line"></div>
+							<div class="container-box__tab block">
+								<div class="block__img"><img src="./img/download-2-copy.png" alt="box"></div>
+								<div class="block__title">Пакет 3</div>
+								<div class="block__line"></div>
 							</div>
 						</div>
-						<div class="content__block--right">
-							<div class="content__block--right--slides activeSlide">
-								<div class="content__block--right--slides--photo">
-									<div class="content__block--right--slides--photo--big">
-										<img class="active" src="./img/download-1-copy-4@3x.png" alt="">
-										<img src="./img/download-1-copy-4@3x.png" alt="">
-										<img src="./img/download-1-copy-4@3x.png" alt="">
-									</div>
-									<div class="content__block--right--slides--bottom">
-										<div class="content__block--right--slides--bottom--img active">
-											<img src="./img/download-1-copy-4.png" alt="">
+						<div class="container-box__right">
+							<div class="container-box__slide container-box__slide_active">
+									<div class="container-box__slider-box slider">
+											<div class="slider__items">
+												<img src="./img/download-1-copy-4@3x.png" alt="box" class="active">
+												<img src="./img/download-1-copy-4@3x.png" alt="box">
+												<img src="./img/download-1-copy-4@3x.png" alt="box">
+			
+											</div>
+											<div class="slider__nav navigation">
+												<div class="navigation__img navigation__img_active"><img src="./img/download-1-copy-4.png" alt="item"></div>
+												<div class="navigation__img"><img src="./img/download-1-copy-4.png" alt="item"></div>
+												<div class="navigation__img"><img src="./img/download-1-copy-4.png" alt="item"></div>
+											</div>
 										</div>
-										<div class="content__block--right--slides--bottom--img">
-											<img src="./img/download-1-copy-4.png" alt="">
+										<div class="container-box__describe-box describe">
+											<div class="describe__title">
+												<h2>Пакет 1</h2>
+											</div>	
+											<div class="describe__text">
+												<p>
+														Лидерство в продажах, на первый взгляд, 
+														продуцирует рейтинг. Экспансия определяет инструмент маркетинга.
+														Направленный маркетинг охватывает опрос. Привлечение аудитории 
+														подсознательно экономит пак-шот, размещаясь во всех медиа. Наряду с этим, 
+														концепция новой стратегии исключительно концентрирует рекламный макет. Привлечение 
+														аудитории спонтанно продуцирует креатив, не считаясь с затратами.
+												</p>
+											</div>	
+											<div class="describe__count">
+												<p>Цена:</p> <span>100 p.</span>
+											</div>
+											<div class="describe__buttons">
+													<div class="button-filled"><a href="#"><span>Купить</span></a></div>
+													<div class="button"><a href="#"><span>В корзину</span></a></div>
+											</div>	
 										</div>
-										<div class="content__block--right--slides--bottom--img">
-											<img src="./img/download-1-copy-4.png" alt="">
-										</div>
-									</div>
-								</div>
-								<div class="content__block--right--slides--describe">
-									<h2>Пакет 1</h2>
-									<p class="content__block--right--slides--describe--text-info">
-										Лидерство в продажах, на первый взгляд, продуцирует рейтинг.
-										Экспансия определяет инструмент маркетинга. Направленный маркетинг охватывает опрос.
-										Привлечение аудитории подсознательно экономит пак-шот, размещаясь во всех медиа. Наряду с этим
-										, концепция новой стратегии исключительно концентрирует рекламный макет. Привлечение аудитории
-										спонтанно продуцирует креатив, не считаясь с затратами.
-									</p>
-									<p class="content__block--right--slides--describe--price">Цена: <span>100</span></p>
-									<div class="content__block--right--slides--describe--buttons">
-										<div class="button-filled"><a href="#"><span>Купить</span></a></div>
-										<div class="button"><a href="#"><span>В корзину</span></a></div>
-									</div>
-
-								</div>
+										
 							</div>
-							<div class="content__block--right--slides">
-								<div class="content__block--right--slides--photo">
-									<div class="content__block--right--slides--photo--big">
-										<img class="active" src="./img/download-2-copy@3x.png" alt="">
-										<img src="./img/download-2-copy@3x.png" alt="">
-										<img src="./img/download-2-copy@3x.png" alt="">
-									</div>
-									<div class="content__block--right--slides--bottom">
-										<div class="content__block--right--slides--bottom--img active">
-											<img src="./img/download-2-copy.png" alt="">
+							<div class="container-box__slide">
+								<div class="container-box__slider-box slider">
+										<div class="slider__items">
+											<img src="./img/download-copy@3x.png" alt="box" class="active">
+											<img src="./img/download-copy@3x.png" alt="box">
+											<img src="./img/download-copy@3x.png" alt="box">
+		
 										</div>
-										<div class="content__block--right--slides--bottom--img">
-											<img src="./img/download-2-copy.png" alt="">
-										</div>
-										<div class="content__block--right--slides--bottom--img">
-											<img src="./img/download-2-copy.png" alt="">
+										<div class="slider__nav navigation">
+											<div class="navigation__img navigation__img_active"><img src="./img/download-copy.png" alt="item"></div>
+											<div class="navigation__img"><img src="./img/download-copy.png" alt="item"></div>
+											<div class="navigation__img"><img src="./img/download-copy.png" alt="item"></div>
 										</div>
 									</div>
-								</div>
-								<div class="content__block--right--slides--describe">
-									<h2>Пакет 3</h2>
-									<p class="content__block--right--slides--describe--text-info">
-										Лидерство в продажах, на первый взгляд, продуцирует рейтинг.
-										Экспансия определяет инструмент маркетинга. Направленный маркетинг охватывает опрос.
-										Привлечение аудитории подсознательно экономит пак-шот, размещаясь во всех медиа. Наряду с этим
-										, концепция новой стратегии исключительно концентрирует рекламный макет. Привлечение аудитории
-										спонтанно продуцирует креатив, не считаясь с затратами.
-									</p>
-									<p class="content__block--right--slides--describe--price">Цена: <span>100</span></p>
-									<div class="content__block--right--slides--describe--buttons">
-										<div class="button-filled"><a href="#"><span>Купить</span></a></div>
-										<div class="button"><a href="#"><span>В корзину</span></a></div>
+									<div class="container-box__describe-box describe">
+										<div class="describe__title">
+											<h2>Пакет 2</h2>
+										</div>	
+										<div class="describe__text">
+											<p>
+													Лидерство в продажах, на первый взгляд, 
+													продуцирует рейтинг. Экспансия определяет инструмент маркетинга.
+													Направленный маркетинг охватывает опрос. Привлечение аудитории 
+													подсознательно экономит пак-шот, размещаясь во всех медиа. Наряду с этим, 
+													концепция новой стратегии исключительно концентрирует рекламный макет. Привлечение 
+													аудитории спонтанно продуцирует креатив, не считаясь с затратами.
+											</p>
+										</div>	
+										<div class="describe__count">
+											<p>Цена:</p> <span>100 p.</span>
+										</div>
+										<div class="describe__buttons">
+												<div class="button-filled"><a href="#"><span>Купить</span></a></div>
+												<div class="button"><a href="#"><span>В корзину</span></a></div>
+										</div>	
 									</div>
-
-								</div>
+									
 							</div>
-							<div class="content__block--right--slides">
-								<div class="content__block--right--slides--photo">
-									<div class="content__block--right--slides--photo--big">
-										<img src="./img/download-copy@3x.png" alt="" class="active">
-										<img src="./img/download-copy@3x.png" alt="">
-										<img src="./img/download-copy@3x.png" alt="">
-									</div>
-									<div class="content__block--right--slides--bottom">
-										<div class="content__block--right--slides--bottom--img active">
-											<img src="./img/download-copy.png" alt="">
+							<div class="container-box__slide">
+								<div class="container-box__slider-box slider">
+										<div class="slider__items">
+											<img src="./img/download-2-copy@3x.png" alt="box" class="active">
+											<img src="./img/download-2-copy@3x.png" alt="box">
+											<img src="./img/download-2-copy@3x.png" alt="box">
+		
 										</div>
-										<div class="content__block--right--slides--bottom--img">
-											<img src="./img/download-copy.png" alt="">
-										</div>
-										<div class="content__block--right--slides--bottom--img">
-											<img src="./img/download-copy.png" alt="">
+										<div class="slider__nav navigation">
+											<div class="navigation__img navigation__img_active"><img src="./img/download-2-copy.png" alt="item"></div>
+											<div class="navigation__img"><img src="./img/download-2-copy.png" alt="item"></div>
+											<div class="navigation__img"><img src="./img/download-2-copy.png" alt="item"></div>
 										</div>
 									</div>
-								</div>
-								<div class="content__block--right--slides--describe">
-									<h2>Пакет 3</h2>
-									<p class="content__block--right--slides--describe--text-info">
-										Лидерство в продажах, на первый взгляд, продуцирует рейтинг.
-										Экспансия определяет инструмент маркетинга. Направленный маркетинг охватывает опрос.
-										Привлечение аудитории подсознательно экономит пак-шот, размещаясь во всех медиа. Наряду с этим
-										, концепция новой стратегии исключительно концентрирует рекламный макет. Привлечение аудитории
-										спонтанно продуцирует креатив, не считаясь с затратами.
-									</p>
-									<p class="content__block--right--slides--describe--price">Цена: <span>100</span></p>
-									<div class="content__block--right--slides--describe--buttons">
-										<div class="button-filled"><a href="#"><span>Купить</span></a></div>
-										<div class="button"><a href="#"><span>В корзину</span></a></div>
+									<div class="container-box__describe-box describe">
+										<div class="describe__title">
+											<h2>Пакет 3</h2>
+										</div>	
+										<div class="describe__text">
+											<p>
+													Лидерство в продажах, на первый взгляд, 
+													продуцирует рейтинг. Экспансия определяет инструмент маркетинга.
+													Направленный маркетинг охватывает опрос. Привлечение аудитории 
+													подсознательно экономит пак-шот, размещаясь во всех медиа. Наряду с этим, 
+													концепция новой стратегии исключительно концентрирует рекламный макет. Привлечение 
+													аудитории спонтанно продуцирует креатив, не считаясь с затратами.
+											</p>
+										</div>	
+										<div class="describe__count">
+											<p>Цена:</p> <span>100 p.</span>
+										</div>
+										<div class="describe__buttons">
+												<div class="button-filled"><a href="#"><span>Купить</span></a></div>
+												<div class="button"><a href="#"><span>В корзину</span></a></div>
+										</div>	
 									</div>
-
-								</div>
+									
 							</div>
 						</div>
 					</div>
@@ -211,7 +211,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="menu--dark">
+	<footer class="menu_dark">
 		<div class="container">
 			<div class="row">
 				<div class="logo">
@@ -241,39 +241,38 @@
 			</div>
 		</div>
 	</footer>
-
 	<div class="overlay">
-		<div class="overlay__busket--menu">
-			<div class="overlay__busket--menu--title">
+		<div class="busket-menu">
+			<div class="busket-menu__title">
 				<h2>Корзина: 2 товара</h2>
 				<a href="#">
-					<div class="overlay__busket--menu--title--btn-close">
+					<div class="busket-menu__btn-close">
 						<span></span>
 					</div>
 				</a>
 			</div>
-			<div class="overlay__busket--menu--buy-list">
-				<div class="overlay__busket--menu--buy-list--item">
-					<div class="overlay__busket--menu--buy-list--item--img">
+			<div class="busket-menu__buy-list list">
+				<div class="list__item">
+					<div class="list__item__img">
 						<img src="./img/download-1-copy-4.png" alt="addas">
 					</div>
-					<div class="overlay__busket--menu--buy-list--item--title">
+					<div class="list__title">
 						Пакет 1 <span class="count">100 р</span><span class="cancel">×</span>
 					</div>
 				</div>
-				<div class="overlay__busket--menu--buy-list--item">
-					<div class="overla__busket--menu--buy-list--item--img">
+				<div class="list__item">
+					<div class="list__item__img">
 						<img src="./img/download-copy.png" alt="addas">
 					</div>
-					<div class="overlay__busket--menu--buy-list--item--title">
+					<div class="list__title">
 						Пакет 2 <span class="count">100 р</span><span class="cancel">×</span>
 					</div>
 				</div>
 			</div>
-			<div class="overlay__busket--menu--total-count">
+			<div class="busket-menu__total-count">
 				<span class="sum">Сумма</span><span class="total">200 р.</span>
 			</div>
-			<div class="overlay__busket--menu--checkout">
+			<div class="busket-menu__checkout">
 				<div class="button-filled">
 					<a href="#">
 						<span>Оформить заказ</span>

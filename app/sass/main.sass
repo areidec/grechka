@@ -53,6 +53,7 @@ a
 		margin: 10px
 .button a
 	&
+		transition: background-color 1s ease
 		color: $green
 .button a:hover
 	background-color: $green
@@ -64,6 +65,7 @@ a
 	&
 		color: white
 .button-filled a
+	transition: box-shadow 1s ease
 	background-color: $green
 	&
 		color: white
@@ -92,123 +94,39 @@ h2
 h3
 	font-size: 16px
   font-weight: bold
-.header
-	display: none
-	width: 100%
-	position: fixed
-	z-index: 1000
-	padding: 10px 0
-	&__busket a:focus
-		.header__busket--btn--shoppingbag
-			box-shadow: 0 3px 10px 0 #3effb3
-			background-color: #37c48c
-	&__busket
-		&.active
-			visibility: hidden
-		a:hover
-			text-decoration: none
-		&--btn
-			width: 216px
-			color: $text
-			font-size: 14px
-			display: flex
-			align-items: center
-			&:hover
-				.header__busket--btn--shoppingbag
-					box-shadow: 0 5px 30px 0 #3effb3
-			&--shoppingbag
-				margin-left: 20px
-				margin-right: 18px
-				width: 50px
-				height: 48px
-				background-color: $green
-				border-radius: 50px
-				text-align: center
-				img
-					padding-top: 6px
-					padding-left: 2px
-			&--title
-				padding-left: 25px
-			&--itemsbought
-				color: $green
-				font-size: 20px
-				font-weight: 500
-			cursor: pointer
-			border: solid $grey 1px
-			border-radius: 25px
-	&__menu
-		width: calc(100% - 216px - 146px - 52px)
-		.header__menu--list::before
-			content: ''
-			position: absolute
-			width: 1px
-			height: 28px
-			background-color: $grey
-		&--list
-			position: relative
-			list-style: none
-			display: flex
-			align-items: center
-			padding: 0
-			margin: 0px
-			height: 100%
-			width: 100%
-			li
-				padding-left: 20px
-			a
-				color: $darkgrey
-				&:hover
-					text-decoration: none
-	a
-		display: flex
-		align-items: center
-	&__logo
-		width: 146px
+.humburger
+	&__btn
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border: 1px solid $green
+		position: relative
 		span
-			padding-left: 10px
-			font-size: 20px
-			color: $red
-			position: relative
-			&.white
-				color: white
-		img
-			width: 40px
-			height: 40px
-		a:hover
-			text-decoration: none
-	&__humburger
-		&--btn
-			display: block
-			width: 50px
-			height: 50px
-			border-radius: 50%
-			border: 1px solid $green
-			position: relative
-			span
+			position: absolute
+			top: 50%
+			width: 25px
+			height: 1px
+			margin-top: -0.5px
+			left: 50%
+			margin-left: -12.5px
+			background-color: $green
+			&::before
+				transform: translateY(-7px)
+			&::after
+				transform: translateY(7px)
+			&::after, &::before
+				content: ''
+				display: block
+				transition: 0.5s
 				position: absolute
 				top: 50%
-				width: 25px
+				width: 20px
 				height: 1px
 				margin-top: -0.5px
 				left: 50%
-				margin-left: -12.5px
+				margin-left: -10px
 				background-color: $green
-				&::before
-					transform: translateY(-7px)
-				&::after
-					transform: translateY(7px)
-				&::after, &::before
-					content: ''
-					display: block
-					transition: 0.5s
-					position: absolute
-					top: 50%
-					width: 20px
-					height: 1px
-					margin-top: -0.5px
-					left: 50%
-					margin-left: -10px
-					background-color: $green
 .title
 	padding-top: 140px
 	padding-bottom: 116px
@@ -218,134 +136,10 @@ h3
 	background-repeat: no-repeat
 	br
 		display: none
-.content
-	background-color: #fff
-	&__block
-		overflow: hidden
-		margin-top: -50px
-		margin-bottom: -50px
-		border-radius: 10px
-		box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1)
-	  background-color: #ffffff
-		display: flex
-		&--right
-			width: 100%
-			background: #fff
-			box-shadow: -17px 0px 106px #e6e6e6
-			position: relative
-			&--slides
-				position: absolute
-				display: none
-				width: 100%
-				height: 100%
-				&--bottom
-					display: flex
-					&--img
-						display: flex
-						justify-content: center
-						align-items: center
-						height: 79px
-						width: 79px
-						border-radius: 50%
-						cursor: pointer
-						border: solid transparent 2px
-						&.active
-							border: solid $red 2px
-						img
-							width: 50px
-							height: 54px
-				&--describe
-					width: 60%
-					display: flex
-					flex-direction: column
-					h2
-						padding-top: 35px
-					&--buttons
-						display: flex
-						@media only screen and (max-width: 1199px)
-							&
-								margin-bottom: 48px
-
-					&--price
-						color: $grey
-						font-size: 14px
-					  font-weight: normal
-					  font-style: normal
-					  font-stretch: normal
-					  line-height: normal
-					  letter-spacing: normal
-					  text-align: center
-						span
-							color: $text
-							font-size: 25px
-  						font-weight: 500
-							padding-left: 10px
-					&--text-info
-						margin-bottom: 35px
-						display: block
-						max-width: 440px
-						max-height: 171px
-						font-size: 16px
-						font-weight: normal
-						line-height: normal
-				&--photo
-					display: flex
-					flex-direction: column
-					align-items: center
-					width: 40%
-					&--big
-						padding-top: 35px
-						top: 0
-						padding-bottom: 35px
-						position: relative
-						img
-							opacity: 0
-							z-index: -1
-							height: 261px
-							position: absolute
-							top: 0
-							left: 0
-							transition: opacity .3s ease
-						.active
-							position: relative
-							z-index: 1
-							opacity: 1
-
-				&.activeSlide
-					display: flex
-					position: relative
-		&--left
-			background-color: #fff
-			overflow: hidden
-			&--item
-				cursor: pointer
-				display: flex
-				flex-direction: column
-				justify-content: center
-				align-items: center
-				&.active
-					.content__block--left--item--line
-						display: block
-				&--line
-					display: none
-					height: 2px
-					width: 90px
-					background-color: $red
-
-				&--img
-					padding-bottom: 18px
-					padding-top: 10px
-				&.active
-					background-color: #fff
-					box-shadow: -33px 9px 38px 14px rgba(0, 0, 0, 0.1)
-				position: relative
-				z-index: 111
-				margin-bottom: 39px
-				width: 160px
-				height: 126px
-			&--item:nth-child(3)
-				margin-bottom: 0
-.header__humburger
+.humburger
+	display: none
+	@media only screen and (max-width: 1199px)
+		display: block
 	z-index: 1999
 	.active
 		border: 1px solid $grey
@@ -361,7 +155,10 @@ h3
 		margin-left: -14px
 		height: 0
 .overlay
-	transition: opacity 1s ease
+	&.active
+		z-index: 2000
+		opacity: 1
+	transition: all 1s ease
 	opacity: 0
 	z-index: -10
 	position: fixed
@@ -369,8 +166,25 @@ h3
 	width: 100vw
 	height: 100vh
 	background-color: rgba(0, 0, 0, 0.3)
-	&__busket--menu
-		transition: all 0.3s ease
+	.busket-menu
+		@media only screen and (max-width: 1199px)
+			width: 100%
+		&__total-count
+			.sum
+				font-size: 14px
+				color: $grey
+			.total
+				padding-left: 20px
+				font-size: 24px
+				font-weight: bold
+		&__checkout
+			display: flex
+			justify-content: center
+			padding: 40px 0
+		&.active
+			transition: transform 0.3s ease
+			transform: translateX(0)
+		transition: transform 0.3s ease
 		transform: translateX(100%)
 		position: absolute
 		right: 0
@@ -380,64 +194,47 @@ h3
 		padding: 0 40px 0 20px
 		display: flex
 		flex-direction: column
-		&--title
+		&__title
 			padding-top: 10px
 			padding-bottom: 40px
 			display: flex
 			justify-content: space-between
-	&__busket--menu--buy-list
-		padding-top: 20px
-		height: (100%)
-		&--item
-			display: flex
-			align-items: center
-			position: relative
-			margin-bottom: 30px
-			&--title
+		&__buy-list
+			padding-top: 20px
+			height: (100%)
+			.list__item
 				display: flex
-				justify-content: space-between
-				padding-left: 10px
-				width: calc(100% - 50px)
-				font-weight: bold
-				span.count
-					font-weight: normal
-				span.cancel
-					font-size: 25px
-					color: $red
-					margin-right: 16px
-		&--item::after
-			position: absolute
-			bottom: -15px
-			content: ''
-			height: 1px
-			width: 100%
-			background-color: $grey
-		&--item:last-child::after
-			display: none
-			position: absolute
-			bottom: -15px
-			content: ''
-			height: 1px
-			width: 100%
-			background-color: $grey
-	&__busket--menu--total-count
-		span.sum
-			font-size: 14px
-			color: $grey
-		span.total
-			padding-left: 20px
-			font-size: 24px
-			font-weight: bold
-	&__busket--menu--checkout
-		display: flex
-		justify-content: center
-		padding: 40px 0
-	&.active
-		z-index: 2000
-		opacity: 1
-	&__busket--menu.active
-		transform: translateX(0)
-.overlay__busket--menu--title--btn-close
+				align-items: center
+				position: relative
+				margin-bottom: 30px
+				&__title
+					display: flex
+					justify-content: space-between
+					padding-left: 10px
+					width: calc(100% - 50px)
+					font-weight: bold
+					span.count
+						font-weight: normal
+					span.cancel
+						font-size: 25px
+						color: $red
+						margin-right: 16px
+			.list__item::after
+				position: absolute
+				bottom: -15px
+				content: ''
+				height: 1px
+				width: 100%
+				background-color: $grey
+			.list__item:last-child::after
+				display: none
+				position: absolute
+				bottom: -15px
+				content: ''
+				height: 1px
+				width: 100%
+				background-color: $grey
+.busket-menu__btn-close
 	span
 		width: 50px
 		height: 50px
@@ -467,13 +264,10 @@ h3
 		background-color: $grey
 		margin-left: -12.5px
 		transform: rotate(-45deg)
-
-
 header
 	@media only screen and (max-width: 1199px)
 		.menu__list
-			transform: translateY(-100%)
-			transition: all 0.3s ease
+			display: none
 			position: fixed
 			background-color: #fff
 			left: 0
@@ -516,7 +310,6 @@ header
 			background-color: $grey
 			margin: 0 20px
 	&__list ul
-		padding-bottom: 8px !important
 		display: flex
 		list-style: none
 		padding: 0
@@ -528,7 +321,7 @@ header
 		a
 			color: $text
 			font-size: 16px
-	&--grey
+	&_grey
 		.busketBtn
 			margin-left: calc(100% - 760px)
 		background-color: #e6e6e6
@@ -546,6 +339,9 @@ header
 		justify-content: space-between
 		width: 100%
 	&__title
+		display: flex
+		justify-content: center
+		align-items: center
 		font-size: 20px
 		color: $red
 .busketBtn
@@ -556,6 +352,7 @@ header
 				display: none
 	&:hover
 		.busketBtn__icon
+			transition: box-shadow 1s ease
 			box-shadow: 0 5px 30px 0 #3effb3
 	&:focus
 		.busketBtn__icon
@@ -589,9 +386,7 @@ header
 		color: $green
 		font-size: 20px
 		font-weight: 500
-footer
-
-.menu--dark
+.menu_dark
 	background-color: $darkgrey
 	padding-top: 214px
 	padding-bottom: 34px
@@ -635,8 +430,170 @@ footer
 		align-items: center
 		&__item
 			padding-left: 11px
+			&:first-child
+				padding-left: 0px
 			a
 				display: block
+.container-box
+	&__slide
+		display: flex
+	background-color: #fff
+	&__left 
+		@media only screen and (max-width: 1199px)
+			flex-direction: row
+			display: flex
+	&__wrap
+		@media only screen and (max-width: 1199px)
+			flex-direction: column
+		margin-top: -50px
+		margin-bottom: -35px
+		background: #fff
+		border-radius: 10px
+		box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1)
+		display: flex
+		overflow: hidden
+		.block:last-child
+			margin-bottom: 0
+		.block_active 
+			@media only screen and (max-width: 1199px)
+				box-shadow: none
+				.block__line 
+					opacity: 0 !important
+			box-shadow: -33px 9px 38px 14px rgba(0,0,0,.1)
+			position: relative
+			z-index: 100
+			.block__line 
+				opacity: 1
+		.block
+			@media only screen and (max-width: 1199px)
+				width: 33.3%
+				margin-bottom: 0
+				border-bottom-left-radius: 0
+			cursor: pointer
+			transition: opacity ease 0.3s
+			margin-bottom: 39px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 160px 
+			height: 126px
+			background: #fff
+			border-bottom-left-radius: 10px
+			&__img 
+				padding-top: 14px
+				padding-bottom: 18.1px
+			&__title 
+				font-size: 16px
+				font-weight: bold
+				padding-bottom: 9px 
+				line-height: normal
+			&__line 
+				opacity: 0
+				width: 110px
+				height: 2px
+				background: $red 
+				margin-bottom: 9px
+	&__slide
+		position: absolute
+		display: none
+	&__slide_active 
+		display: flex
+	&__right 
+		@media only screen and (max-width: 1199px)
+			box-shadow: -17px 0 38px #e6e6e6
+			height: 500px
+		width: 100%
+		display: flex 
+		position: relative
+		box-shadow: -17px 0 106px #e6e6e6
+		.slider 
+			margin-right: 10px
+			padding-left: 20px
+			@media only screen and (max-width: 1199px)
+				&__items 
+					height: 167px !important
+					display: flex 
+					align-items: center !important
+					justify-content: center !important
+					img 
+						height: 167px !important
+	
+				margin-right: 30px
+			&__nav 
+				display: flex
+				align-items: center
+				justify-content: center
+			.navigation
+				&__img 
+					cursor: pointer
+					margin-right: 10px
+					height: 79px
+					width: 79px
+					display: flex
+					align-items: center 
+					justify-content: center
+					border-radius: 50%
+				&__img:last-child
+					margin-right: 0
+				&__img_active 
+					border: solid 2px $red
+			&__items
+				margin-bottom: 31px
+				height: 261px
+				width: 261px
+				margin-top: 35px
+				position: relative
+				transition: opacity 0.3s ease
+				img 
+					transition: opacity 0.3s ease
+					position: absolute
+					height: 261px
+					opacity: 0
+					&.active
+						opacity: 1
+		.describe 
+			z-index: 400 
+			@media only screen and (max-width: 1199px)
+					width: calc(100% - 300px)
+			&__title
+				padding-top: 35px
+				padding-bottom: 10px
+			&__text
+				width: 100%
+				font-size: 16px
+				font-weight: normal
+				line-height: normal
+				color: $text
+				p 
+					margin-right: 32px
+			&__count
+				display: flex
+				align-items: baseline
+				margin-bottom: 30px
+				span 
+					font-weight: bold
+					font-size: 25px
+					margin-left: 20px
+				p
+					margin: 0
+					font-size: 14px
+					font-weight: normal
+					font-style: normal
+					line-height: normal
+					color: $grey
+			&__buttons 
+				z-index: 600
+				display: flex
+				@media only screen and (max-width: 1199px)
+					margin-bottom: 48px
+					a 
+						margin: 0
+						margin-right: 10px
+				
+				
+					
+					
 
 
 
