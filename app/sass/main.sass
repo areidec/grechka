@@ -52,42 +52,44 @@ a
 		border: solid $green 2px
 		margin: 10px
 .button a
-	&
-		transition: background-color 1s ease
-		color: $green
-.button a:hover
-	background-color: $green
-	&
+	transition: background-color 1s ease
+	color: $green
+	&:hover
+		background-color: $green
 		color: white
-.button a:focus
-	border: solid #37c48c 2px
-	background-color: #37c48c
-	&
+	&:focus
+		border: solid #37c48c 2px
+		background-color: #37c48c
 		color: white
 .button-filled a
 	transition: box-shadow 1s ease
 	background-color: $green
-	&
+	color: white
+	&:hover
+		background-color: $green
+		box-shadow: 0 5px 30px 0 #3effb3
 		color: white
-.button-filled a:hover
-	background-color: $green
-	box-shadow: 0 5px 30px 0 #3effb3
-	&
+	&:focus
+		box-shadow: 0 3px 10px 0 #3effb3
+		background-color: #37c48c
+		border: 2px solid #37c48c
 		color: white
-.button-filled a:focus
-	box-shadow: 0 3px 10px 0 #3effb3
-	background-color: #37c48c
-	border: 2px solid #37c48c
-	&
-		color: white
-h1.red
-	color: $red
-	font-weight: bold
 h1
 	font-size: 26px
 	font-weight: 100
 	line-height: 1.31
 	letter-spacing: 1.3px
+	display: flex 
+	flex-direction: column
+	margin-bottom: 0.8px
+	@media only screen and (max-width: 1199px)
+		margin-bottom: 1.2px	
+	span 
+		@media only screen and (max-width: 1199px)
+			display: flex
+			flex-direction: column
+		color: $red
+		font-weight: bold
 h2
 	font-size: 25px
   font-weight: 500
@@ -129,13 +131,14 @@ h3
 				background-color: $green
 .title
 	padding-top: 140px
-	padding-bottom: 116px
+	padding-bottom: 123px
 	background-image: url(../img/artboard.jpg)
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
-	br
-		display: none
+	@media only screen and (max-width: 1199px)
+		padding-top: 108px
+		padding-bottom: 59px
 .humburger
 	display: none
 	@media only screen and (max-width: 1199px)
@@ -202,38 +205,39 @@ h3
 		&__buy-list
 			padding-top: 20px
 			height: (100%)
-			.list__item
-				display: flex
-				align-items: center
-				position: relative
-				margin-bottom: 30px
-				&__title
-					display: flex
-					justify-content: space-between
-					padding-left: 10px
-					width: calc(100% - 50px)
-					font-weight: bold
-					span.count
-						font-weight: normal
-					span.cancel
-						font-size: 25px
-						color: $red
-						margin-right: 16px
-			.list__item::after
-				position: absolute
-				bottom: -15px
-				content: ''
-				height: 1px
-				width: 100%
-				background-color: $grey
-			.list__item:last-child::after
-				display: none
-				position: absolute
-				bottom: -15px
-				content: ''
-				height: 1px
-				width: 100%
-				background-color: $grey
+.list__item
+	display: flex
+	align-items: center
+	position: relative
+	margin-bottom: 30px
+	.list__title
+		align-items: center
+		display: flex
+		justify-content: space-between
+		padding-left: 10px
+		width: calc(100% - 50px)
+		font-weight: bold
+		span.count
+			font-weight: normal
+		span.cancel
+			font-size: 25px
+			color: $red
+			margin-right: 16px
+.list__item::after
+	position: absolute
+	bottom: -15px
+	content: ''
+	height: 1px
+	width: 100%
+	background-color: $grey
+.list__item:last-child::after
+	display: none
+	position: absolute
+	bottom: -15px
+	content: ''
+	height: 1px
+	width: 100%
+	background-color: $grey
 .busket-menu__btn-close
 	span
 		width: 50px
@@ -267,13 +271,14 @@ h3
 header
 	@media only screen and (max-width: 1199px)
 		.menu__list
+			justify-content: center
 			display: none
 			position: fixed
 			background-color: #fff
 			left: 0
 			width: 100vw
 			height: 100vh
-			margin: -10px 0
+			margin: -24px 0
 			z-index: 1000
 			&
 				ul
@@ -298,8 +303,8 @@ header
 	align-items: center
 	justify-content: center
 	&__list
+		width: calc(100% - 216px - 146px)
 		display: flex
-		justify-content: center
 		align-items: center
 		&::before
 			content: ''
@@ -322,13 +327,14 @@ header
 			color: $text
 			font-size: 16px
 	&_grey
-		.busketBtn
-			margin-left: calc(100% - 760px)
 		background-color: #e6e6e6
 		@media only screen and (max-width: 1199px)
+			padding: 25px
+			.logo 
+				@media only screen and (max-width: 1199px)
+					margin-right: calc(100% - 370px)
 			&
 				.busketBtn
-					margin-left: calc(100% - 370px)
 					margin-right: 64px
 .logo
 	width: 146px
@@ -365,6 +371,7 @@ header
 	display: flex
 	align-items: center
 	&__icon
+		transition: box-shadow 1s ease
 		width: 50px
 		height: 50px
 		border-radius: 50%
@@ -376,7 +383,7 @@ header
 			padding-bottom: 5px
 			padding-left: 2px
 	&__title
-		color: #4a4a4a
+		color: $grey
 		font-size: 14px
 		font-weight: 500
 		padding-left: 22px
@@ -388,11 +395,11 @@ header
 		font-weight: 500
 .menu_dark
 	background-color: $darkgrey
-	padding-top: 214px
-	padding-bottom: 34px
+	margin-top: 247px
+	margin-bottom: 41.2px
 	@media only screen and (max-width: 1199px)
 		&
-			padding-top: 89px
+			margin-top: 114px
 			.logo
 				width: 100%
 				a
@@ -402,10 +409,11 @@ header
 					.logo__img
 						padding-bottom: 10px
 					.logo__title
-						padding-bottom: 41px
+						margin-bottom: 41px
 			.menu__list
-				width: 100%
+				width: 100% !important
 				position: relative
+				justify-content: center
 			.menu__list::before
 				top: -20px
 				position: absolute
@@ -413,19 +421,19 @@ header
 				height: 1px
 				margin: 0
 			.social-menu
-				padding-top: 41px
+				margin-top: 41px
 				justify-content: center
 				align-items: center
 				width: 100%
 				margin-left: 0 !important
 	.menu__list
+		width: calc(100% - 146px - 112px)
 		a
 			color: white
 	.logo
 		&__title
 			color: white
 	.social-menu
-		margin-left: calc(100% - 690px)
 		display: flex
 		align-items: center
 		&__item
@@ -435,65 +443,34 @@ header
 			a
 				display: block
 .container-box
+	background-color: #fff
 	&__slide
 		display: flex
-	background-color: #fff
 	&__left 
 		@media only screen and (max-width: 1199px)
 			flex-direction: row
 			display: flex
 	&__wrap
-		@media only screen and (max-width: 1199px)
-			flex-direction: column
-		margin-top: -50px
-		margin-bottom: -35px
+		margin-top: -53px
+		margin-bottom: -33px
 		background: #fff
 		border-radius: 10px
 		box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1)
 		display: flex
 		overflow: hidden
-		.block:last-child
-			margin-bottom: 0
-		.block_active 
-			@media only screen and (max-width: 1199px)
-				box-shadow: none
-				.block__line 
-					opacity: 0 !important
-			box-shadow: -33px 9px 38px 14px rgba(0,0,0,.1)
-			position: relative
-			z-index: 100
-			.block__line 
-				opacity: 1
-		.block
-			@media only screen and (max-width: 1199px)
-				width: 33.3%
-				margin-bottom: 0
-				border-bottom-left-radius: 0
-			cursor: pointer
-			transition: opacity ease 0.3s
-			margin-bottom: 39px
-			display: flex
+		@media only screen and (max-width: 1199px)
 			flex-direction: column
-			justify-content: center
-			align-items: center
-			width: 160px 
-			height: 126px
-			background: #fff
-			border-bottom-left-radius: 10px
-			&__img 
-				padding-top: 14px
-				padding-bottom: 18.1px
-			&__title 
-				font-size: 16px
-				font-weight: bold
-				padding-bottom: 9px 
-				line-height: normal
-			&__line 
-				opacity: 0
-				width: 110px
-				height: 2px
-				background: $red 
-				margin-bottom: 9px
+			margin-top: -28px
+			margin-bottom: -73px
+	&__tab
+		cursor: pointer
+		margin-bottom: 39px
+		width: 160px 
+		height: 126px
+		@media only screen and (max-width: 1199px)
+			width: 33.3%
+			margin-bottom: 0
+			border-bottom-left-radius: 0
 	&__slide
 		position: absolute
 		display: none
@@ -508,8 +485,8 @@ header
 		position: relative
 		box-shadow: -17px 0 106px #e6e6e6
 		.slider 
-			margin-right: 10px
-			padding-left: 20px
+			margin-right: 44px
+			margin-left: 15px
 			@media only screen and (max-width: 1199px)
 				&__items 
 					height: 167px !important
@@ -557,20 +534,29 @@ header
 			@media only screen and (max-width: 1199px)
 					width: calc(100% - 300px)
 			&__title
-				padding-top: 35px
-				padding-bottom: 10px
+				margin-top: 33.1px
+				margin-bottom: 19.1px
+				font-size: 25px
+				font-weight: 500
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: normal
 			&__text
 				width: 100%
 				font-size: 16px
 				font-weight: normal
 				line-height: normal
+				font-stretch: normal
+				letter-spacing: normal
 				color: $text
 				p 
-					margin-right: 32px
+					margin-right: 23px
+					margin-bottom: 29.5px
 			&__count
 				display: flex
 				align-items: baseline
-				margin-bottom: 30px
+				margin-bottom: 24.5px
 				span 
 					font-weight: bold
 					font-size: 25px
@@ -590,12 +576,42 @@ header
 					a 
 						margin: 0
 						margin-right: 10px
-				
-				
-					
-					
-
-
-
+.block
+	transition: opacity ease 0.3s
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	border-bottom-left-radius: 10px
+	border-top-left-radius: 10px
+	background: #fff
+	&__img 
+		padding-top: 13.85px
+		padding-bottom: 12.95px
+	&__title 
+		font-size: 16px
+		font-weight: bold
+		margin-bottom: 7.2px 
+		line-height: normal
+	&__line 
+		opacity: 0
+		width: 110px
+		height: 2px
+		background: $red 
+		margin-bottom: 9px
+	&:first-child 
+		border-top-left-radius: 0px
+	&:last-child
+		margin-bottom: 0
+	&_active 
+		@media only screen and (max-width: 1199px)
+			box-shadow: none
+			.block__line 
+				opacity: 0 !important
+		box-shadow: -33px 9px 38px 14px rgba(0,0,0,.1)
+		position: relative
+		z-index: 100
+		.block__line 
+			opacity: 1		
 
 @import "media" // Always at the end
