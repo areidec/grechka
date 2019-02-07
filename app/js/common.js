@@ -30,10 +30,9 @@ $(function() {
   });
 
   //Busket
-  $('.busketBtn').on('click', function(event){
+  $('.busket-btn').on('click', function(event){
     event.preventDefault();
     $('.overlay').addClass('active')
- 
     $('.busket-menu ').addClass('active')
   });
 
@@ -42,6 +41,11 @@ $(function() {
     event.preventDefault();
     $('.overlay').removeClass('active')
     $('.busket-menu ').removeClass('active')
+  });
+
+  $('.overlay__bg').on('click', function(){
+    $('.overlay').removeClass('active');
+    $('.busket-menu ').removeClass('active');
   });
 
   //change tabs 
