@@ -20,32 +20,16 @@ $(function() {
     event.preventDefault();
     $(this).toggleClass('active');
 
-    if(menuStateOpen) {
-      $('.menu_grey .menu__list').menu('close');
-    }
-    else {
-      $('.menu_grey .menu__list').menu('open');
-    }
+    menuStateOpen ? $('.menu_grey .menu__list').menu('close') : $('.menu_grey .menu__list').menu('open');
+
     menuStateOpen = !menuStateOpen;
   });
 
   //Busket
-  $('.busket-btn').on('click', function(event){
+  $('.js-tgl-basket').on('click', function(event){
     event.preventDefault();
-    $('.overlay').addClass('active')
-    $('.busket-menu ').addClass('active')
-  });
-
-  // overlay 
-  $('.busket-menu__btn-close').on('click', function(event){
-    event.preventDefault();
-    $('.overlay').removeClass('active')
-    $('.busket-menu ').removeClass('active')
-  });
-
-  $('.overlay__bg').on('click', function(){
-    $('.overlay').removeClass('active');
-    $('.busket-menu ').removeClass('active');
+    $('.overlay').toggleClass('active')
+    $('.busket-menu ').toggleClass('active')
   });
 
   //change tabs 
